@@ -90,7 +90,7 @@ async def start(bot, cmd):
 			except Exception:
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/MoviesBazzz2).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -120,7 +120,7 @@ async def start(bot, cmd):
 				if user.status == "kicked":
 					await bot.send_message(
 						chat_id=cmd.from_user.id,
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/MoviesBazzz2).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -146,7 +146,7 @@ async def start(bot, cmd):
 			except Exception:
 				await bot.send_message(
 					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/MoviesBazzz2).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -154,14 +154,14 @@ async def start(bot, cmd):
 		try:
 			file_id = int(usr_cmd)
 			send_stored_file = await bot.copy_message(chat_id=cmd.from_user.id, from_chat_id=DB_CHANNEL, message_id=file_id)
-			await send_stored_file.reply_text(f"**Here is Sharable Link of this file:** https://telegram.dog/{BOT_USERNAME}?start=AbirHasan2005_{file_id}\n\n__To Retrive the Stored File, just open the link!__", disable_web_page_preview=True, quote=True)
+			await send_stored_file.reply_text(f"**Here is Sharable Link of this file:** https://telegram.dog/{BOT_USERNAME}?start=MoviesBazzz_{file_id}\n\n__To Retrive the Stored File, just open the link!__", disable_web_page_preview=True, quote=True)
 		except Exception as err:
 			await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
 @Bot.on_message(filters.media & ~filters.edited & filters.user(BOT_OWNER))
 async def main(bot, message):
 	if message.chat.type == "private":
-		editable = await message.reply_text("Please wait ...")
+		editable = await message.reply_text("Wait Boss...")
 		try:
 			forwarded_msg = await message.forward(DB_CHANNEL)
 			file_er_id = forwarded_msg.message_id
@@ -329,7 +329,7 @@ async def button(bot, cmd: CallbackQuery):
 				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.message.chat.id)
 				if user.status == "kicked":
 					await cmd.message.edit(
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
+						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/MoviesBazzz2).",
 						parse_mode="markdown",
 						disable_web_page_preview=True
 					)
@@ -352,7 +352,7 @@ async def button(bot, cmd: CallbackQuery):
 				return
 			except Exception:
 				await cmd.message.edit(
-					text="Something went Wrong. Contact my [Support Group](https://t.me/linux_repo).",
+					text="Something went Wrong. Contact my [Support Group](https://t.me/MoviesBazzz2).",
 					parse_mode="markdown",
 					disable_web_page_preview=True
 				)
@@ -364,8 +364,8 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Support Group", url="https://t.me/linux_repo"),
-						InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
+						InlineKeyboardButton("Support Group", url="https://t.me/MoviesBazzz2"),
+						InlineKeyboardButton("🔥MoviesBazzz🔥", url="https://t.me/joinchat/TP9IxftrpLQHA2NE")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
