@@ -166,12 +166,12 @@ async def main(bot, message):
 			forwarded_msg = await message.forward(DB_CHANNEL)
 			file_er_id = forwarded_msg.message_id
 			await forwarded_msg.reply_text(f"#PRIVATE_FILE:\n\n[{message.from_user.first_name}](tg://user?id={message.from_user.id}) Got File Link!", parse_mode="Markdown", disable_web_page_preview=True)
-			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=AbirHasan2005_{file_er_id}"
+			share_link = f"https://telegram.dog/{BOT_USERNAME}?start=MoviesBazzz_{file_er_id}"
 			await editable.edit(
 				f"**Your File Stored in my Database!**\n\nHere is the Permanent Link of your file: {share_link} \n\nJust Click the link to get your file!",
 				parse_mode="Markdown",
 				reply_markup=InlineKeyboardMarkup(
-					[[InlineKeyboardButton("Open Link", url=share_link)], [InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates"), InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]
+					[[InlineKeyboardButton("Open Link", url=share_link)], [InlineKeyboardButton("🔥MoviesBazzz🔥", url="https://t.me/joinchat/TP9IxftrpLQHA2NE"), InlineKeyboardButton("Support Group", url="https://t.me/linux_repo")]]
 				),
 				disable_web_page_preview=True
 			)
