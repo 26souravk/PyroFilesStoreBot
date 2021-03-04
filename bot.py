@@ -158,7 +158,7 @@ async def start(bot, cmd):
 		except Exception as err:
 			await cmd.reply_text(f"Something went wrong!\n\n**Error:** `{err}`")
 
-@Bot.on_message(filters.media & ~filters.edited)
+@Bot.on_message(filters.media & ~filters.edited & filters.user(BOT_OWNER))
 async def main(bot, message):
 	if message.chat.type == "private":
 		editable = await message.reply_text("Please wait ...")
@@ -284,9 +284,6 @@ async def button(bot, cmd: CallbackQuery):
 			reply_markup=InlineKeyboardMarkup(
 				[
 					[
-						InlineKeyboardButton("Source Codes of Bot", url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
-					],
-					[
 						InlineKeyboardButton("Go Home", callback_data="gotohome"),
 						InlineKeyboardButton("About Dev", callback_data="aboutdevs")
 					]
@@ -300,9 +297,6 @@ async def button(bot, cmd: CallbackQuery):
 			disable_web_page_preview=True,
 			reply_markup=InlineKeyboardMarkup(
 				[
-					[
-						InlineKeyboardButton("Source Codes of Bot", url="https://github.com/AbirHasan2005/PyroFilesStoreBot")
-					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
 						InlineKeyboardButton("Go Home", callback_data="gotohome")
