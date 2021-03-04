@@ -58,7 +58,7 @@ async def start(bot, cmd):
 		)
 	usr_cmd = cmd.text.split("_")[-1]
 	if usr_cmd == "/start":
-		if Config.UPDATES_CHANNEL:
+		if not Config.UPDATES_CHANNEL == 2005:
 			invite_link = await bot.export_chat_invite_link(Config.UPDATES_CHANNEL)
 			try:
 				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.from_user.id)
@@ -113,7 +113,7 @@ async def start(bot, cmd):
 			)
 		)
 	else:
-		if Config.UPDATES_CHANNEL:
+		if not Config.UPDATES_CHANNEL == 2005:
 			invite_link = await bot.export_chat_invite_link(Config.UPDATES_CHANNEL)
 			try:
 				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.from_user.id)
