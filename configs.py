@@ -26,5 +26,4 @@ This is Permanent Files Store Bot Of @MoviesBazzz!
 Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
 This Bot Works Only For @MoviesBazzz 🤪
 😎 **Bot Owner:** [@Souk26](https://t.me/Souk26)
-
 """
