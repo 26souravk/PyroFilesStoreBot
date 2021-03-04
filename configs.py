@@ -20,13 +20,11 @@ This is Permanent Files Store Bot Of @MoviesBazzz!
 	ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 **Developer:** @AbirHasan2005
 
-Developer is Super Noob. Just Learning from Official Docs. Please Donate the developer for Keeping the Service Alive.
-
-Also remember that developer will Delete Adult Contents from Database. So better don't Store Those Kind of Things.
-
 [Donate Now](https://www.paypal.me/AbirHasan2005) (PayPal)
 """
 	HOME_TEXT = """
 Hi, [{}](tg://user?id={})\n\nThis is Permanent **File Store Bot**.
 This Bot Works Only For @MoviesBazzz 🤪
+😎 **Bot Owner:** [@Souk26](https://t.me/Souk26)
+
 """
