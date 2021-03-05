@@ -58,43 +58,6 @@ async def start(bot, cmd):
 		)
 	usr_cmd = cmd.text.split("_")[-1]
 	if usr_cmd == "/start":
-		if not Config.UPDATES_CHANNEL == 2005:
-			invite_link = await bot.export_chat_invite_link(Config.UPDATES_CHANNEL)
-			try:
-				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.from_user.id)
-				if user.status == "kicked":
-					await bot.send_message(
-						chat_id=cmd.from_user.id,
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/linux_repo).",
-						parse_mode="markdown",
-						disable_web_page_preview=True
-					)
-					return
-			except UserNotParticipant:
-				await bot.send_message(
-					chat_id=cmd.from_user.id,
-					text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
-					reply_markup=InlineKeyboardMarkup(
-						[
-							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link)
-							],
-							[
-								InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
-							]
-						]
-					),
-					parse_mode="markdown"
-				)
-				return
-			except Exception:
-				await bot.send_message(
-					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Group](https://t.me/MoviesBazzz2).",
-					parse_mode="markdown",
-					disable_web_page_preview=True
-				)
-				return
 		await cmd.reply_text(
 			HOME_TEXT.format(cmd.from_user.first_name, cmd.from_user.id),
 			parse_mode="Markdown",
@@ -113,44 +76,6 @@ async def start(bot, cmd):
 			)
 		)
 	else:
-		if not Config.UPDATES_CHANNEL == 2005:
-			invite_link = await bot.export_chat_invite_link(Config.UPDATES_CHANNEL)
-			try:
-				user = await bot.get_chat_member(Config.UPDATES_CHANNEL, cmd.from_user.id)
-				if user.status == "kicked":
-					await bot.send_message(
-						chat_id=cmd.from_user.id,
-						text="Sorry Sir, You are Banned to use me. Contact my [Support Group](https://t.me/MoviesBazzz2).",
-						parse_mode="markdown",
-						disable_web_page_preview=True
-					)
-					return
-			except UserNotParticipant:
-				file_id = int(usr_cmd)
-				await bot.send_message(
-					chat_id=cmd.from_user.id,
-					text="**Please Join My Updates Channel to use this Bot!**\n\nDue to Overload, Only Channel Subscribers can use the Bot!",
-					reply_markup=InlineKeyboardMarkup(
-						[
-							[
-								InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link)
-							],
-							[
-								InlineKeyboardButton("🔄 Refresh / Try Again", url=f"https://telegram.dog/{BOT_USERNAME}?start=MoviesBazzz_{file_id}")
-							]
-						]
-					),
-					parse_mode="markdown"
-				)
-				return
-			except Exception:
-				await bot.send_message(
-					chat_id=cmd.from_user.id,
-					text="Something went Wrong. Contact my [Support Group](https://t.me/MoviesBazzz2).",
-					parse_mode="markdown",
-					disable_web_page_preview=True
-				)
-				return
 		try:
 			file_id = int(usr_cmd)
 			send_stored_file = await bot.copy_message(chat_id=cmd.from_user.id, from_chat_id=DB_CHANNEL, message_id=file_id)
