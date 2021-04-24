@@ -7,7 +7,6 @@ This is Telegram Files Store Bot by [@AbirHasan2005](https://github.com/AbirHasa
 ### Features:
 - In PM Just Forward or Send any file it will save on Database & give you the Access Link.
 - In Channel Add Bot as Admin with Edit Rights. When you will send any file or media in Channel it will Edit the Broadcast Message with Saved Link Button.
-- You can also Broadcast anythings via this Bot.
 - You can also Do Force Sub to a Channel to allow access the Bot.
 
 ### Demo Bot:
@@ -20,7 +19,6 @@ This is Telegram Files Store Bot by [@AbirHasan2005](https://github.com/AbirHasa
 * `BOT_USERNAME` - You Bot Username. *(Without [@])*
 * `DB_CHANNEL` - The Channel ID which will be used as Database
 * `BOT_OWNER` - Bot Owner UserID
-* `DATABASE_URL` - MongoDB Database URI for Saving UserID for Broadcast.
 * `UPDATES_CHANNEL` - ID of a Channel which you want to do Force Sub to use the bot. *(Optional)*
 * `LOG_CHANNEL` - Logs Channel ID for some Tracking.
 
@@ -30,8 +28,6 @@ This is Telegram Files Store Bot by [@AbirHasan2005](https://github.com/AbirHasa
 ## Commands:
 ```
 start - start the bot
-status - Show number of users in DB
-broadcast - Broadcast replied message to DB Users
 ```
 
 ### Support Group:
