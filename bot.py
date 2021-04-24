@@ -35,7 +35,7 @@ async def start(bot, cmd):
 				[
 					[
 						InlineKeyboardButton("Support Group", url="https://t.me/MoviesBazzz2"),
-						InlineKeyboardButton("🔥MoviesBazzz🔥", url="https://t.me/joinchat/TP9IxftrpLQHA2NE")
+						InlineKeyboardButton("🔥MoviesBazzz🔥", url="https://t.me/joinchat/j6vObMyEZ41mOTVl")
 					],
 					[
 						InlineKeyboardButton("About Bot", callback_data="aboutbot"),
